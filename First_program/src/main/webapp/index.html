@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Addition</title>
+<style>
+	input{
+		box-shadow: 1mm 1mm 3mm;
+		border-radius: 2mm;
+		height: .8cm;
+		padding-left: 2mm; 
+		font-size: 12pt;
+		text-transform: uppercase;
+		max-lines: 1;
+	}
+	input:hover{
+		background-color: skyblue;
+		
+	}
+	#sub{
+		width: 40mm;
+		background-color: palegreen;	
+	}
+	#sub:hover{
+		background-color: lightblue;
+	}
+	.div2{
+		width: 50%;
+		height: 250px;
+		float: left;
+		border: .5mm solid lightgrey;
+		padding: 5mm;
+		border-radius: 3mm;
+		float: right;
+		box-shadow: 2mm 2mm 3mm green;
+		background-color:rgba(0,0,0,.6);
+		text-align: center;
+	}
+	.div2 input[type="text"]{
+		box-shadow: 1mm 1mm 2mm white;
+		background-color: transparent;
+		color: white;
+	}
+
+	body{
+		padding: 1cm;
+		background-image: url('D:/DatabaseConnection/First_program/image1.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		color: green;
+		font-weight: bold;
+	}
+	#div3{
+		width: 200px;
+		height: 200px;
+		float: right;
+		border: .5mm solid lightgrey;
+		padding: 5mm;
+		border-radius: 3mm;
+		box-shadow: 2mm 2mm 3mm green;
+		background-image: url('D:/DatabaseConnection/First_program/image2.jpg');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	#div3:hover{
+		background-image: url('D:/DatabaseConnection/First_program/381.jpg');
+		background-size: 250px 250px;
+		background-repeat: no-repeat;
+		
+	}
+	#div0{
+		width: 500px;
+		height: 250px;
+		float: left;
+		border: .5mm solid lightgrey;
+		padding: 5mm;
+		border-radius: 3mm;
+		box-shadow: 2mm 2mm 3mm green;
+		position: absolute;
+	}
+	p{
+		margin-left: 1cm;
+		margin-top: 0;
+		margin-right: 1cm;
+	}
+	fieldset{
+		padding: 3mm;
+		height: 150px;
+		width: 95%;
+		border: 1mm solid white;
+		background-color: rgba(0,0,0,.5);
+	}
+	fieldset legend{
+		color: white;
+		border-radius: 5mm;
+	}
+	fieldset input[type=text]
+	{
+		height: 1cm;
+	}
+	fieldset select
+	{
+		height: 1.2cm;
+		width: 1.5cm;
+		border-radius: 3mm;
+		
+	}
+	fieldset select option
+	{
+		font-size: 15pt;
+		border: none;
+		
+	}
+</style>
+
+</head>
+<body>
+	<div id="div0">
+		<div style="border-radius: 5mm;border:.4mm solid rgb(192, 192, 192);width: 40%;padding: 5mm;
+			box-shadow: 2mm 2mm 4mm green;float:left;height: 200px;background-color:rgba(255,255,255,.5);text-align: center;">
+			<form action="Add">
+			First number: <br><input type="text" name="num1" placeholder="First Number"	required><br><br>
+			Second Number:<br> <input type="text" name="num2" placeholder="Second Number" required><br><br>
+			<input id="sub" type="submit" name="submit" value="add">
+			<input id="sub" type="reset" value="reset"><br>
+			</form>
+		</div>
+		<div id="div3" >
+		
+		</div>	
+	</div>
+	<div class="div2">
+		<p>welcome<br>
+		<form action="CalculationServlet" >
+			<fieldset>
+				<legend>Calculation</legend>
+				<input class="textBox" type="text" name="n1" required>
+					<select name="sel1" required>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				<input class="textBox" type="text" name="n2" required>
+				<br><br>
+				<input id="sub" type="submit" name="n3" value="Calculate">
+				
+			</fieldset>
+		</form>
+		</p>
+	</div>
+</body>
+</html>
